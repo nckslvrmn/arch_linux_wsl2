@@ -1,5 +1,5 @@
 # Arch Linux on WSL2
-Installation instructions for Arch Linux in WSL2
+These are installation instructions for Arch Linux in WSL2 using the officially built bootstrap image.
 
 ## Requirements
 1) [Install WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
