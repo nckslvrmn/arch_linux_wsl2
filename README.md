@@ -31,4 +31,4 @@ Arch can now be launched on the machine it was installed on. Some additional con
 ## Next Steps
 From here, you can continue setting up your new Arch Linux based WSL2 installation by following the [Installation Guide](https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system). It is probably a good idea to set your locale, hostname, and to create yourself a new user to use. Keep in mind that you will not need to worry about your `fstab` or bootloader to use Arch in WSL. Installing an [aur helper](https://github.com/Morganamilo/paru) is also a good idea.
 
-Additionally, if you use [Windows Terminal](https://github.com/microsoft/terminal) you can set Arch to launch with your new user in its home directory by adding `"commandline": "wsl ~"` to the profile in the profile list.
+Additionally, if you use [Windows Terminal](https://github.com/microsoft/terminal) you can set Arch to launch with your new user in its home directory by adding `"commandline": "wsl ~ -u <username>"` to the profile in the profile list. Arch must be the default WSL installation for this to work (which can be done with `wsl --set-default Arch`.
