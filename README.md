@@ -25,3 +25,10 @@ Arch can now be launched on the machine it was installed on. Some additional con
 2) Initialize the keyring required to run pacman: `pacman-key --init`
 3) Fill the new keyring with Arch's latest set of keys: `pacman-key --populate archlinux`
 4) Pacman's mirrorlist is already installed but entirelly commented out. Fetch a new one and overrite the existing one: `curl "https://archlinux.org/mirrorlist/?country=US&protocol=https&ip_version=4&use_mirror_status=on" | cut -c 2- > /etc/pacman.d/mirrorlist`
+5) Update the repos and install the latest packages: `pacman -Syu`
+6) There will also be a handful of missing "base" packages that are always useful to have and can be installed with: `pacman -S base base-devel`
+
+## Next Steps
+From here, you can continue setting up your new Arch Linux based WSL2 installation by following the [Installation Guide](https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system). It is probably a good idea to set your locale, hostname, and to create yourself a new user to use. Keep in mind that you will not need to worry about your `fstab` or bootloader to use Arch in WSL. Installing an [aur helper](https://github.com/Morganamilo/paru) is also a good idea.
+
+Additionally, if you use [Windows Terminal](https://github.com/microsoft/terminal) you can set Arch to launch with your new user in its home directory by adding `"commandline": "wsl ~"` to the profile in the profile list.
