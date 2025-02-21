@@ -3,8 +3,8 @@ These are installation instructions for Arch Linux in WSL2 using the officially 
 
 ## Requirements
 1) [Install WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-2) [Update to the latest kernel](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
-3) Set WSL2 as the default version `wsl --set-default-version 2` (version 2 is set by default in newer windows builds)
+3) Update to the latest kernel by running `wsl --update` or [downloading the kernel msi directly](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+4) Set WSL2 as the default version `wsl --set-default-version 2` (version 2 is set by default in newer windows builds)
 
 ## Preparing the Image
 In an existing linux install (another WSL distro, VM, or native), download the `archlinux-bootstrap-<version>-x86_64.tar.gz` bootstrap image from an [arch mirror](https://archlinux.org/download/) closest to you.
