@@ -28,7 +28,7 @@ Arch can now be launched on the machine it was installed on. Some additional con
 1) Launch the installation: `wsl -d Arch`
 2) Initialize the keyring required to run pacman: `pacman-key --init`
 3) Fill the new keyring with Arch's latest set of keys: `pacman-key --populate archlinux`
-4) Pacman's mirrorlist is already installed but entirelly commented out. Fetch a new one and overrite the existing one: `curl "https://archlinux.org/mirrorlist/?country=US&protocol=https&ip_version=4&use_mirror_status=on" | cut -c 2- > /etc/pacman.d/mirrorlist`
+4) Pacman's mirrorlist is already installed but entirelly commented out. Fetch a new one and overrite the existing one: `curl -s -k -o /etc/pacman.d/mirrorlist "https://archlinux.org/mirrorlist/?country=US&protocol=https&ip_version=4&use_mirror_status=on"`
 5) Update the repos and install the latest packages: `pacman -Syu`
 6) There will also be a handful of missing "base" packages that are always useful to have and can be installed with: `pacman -S base base-devel`
 
